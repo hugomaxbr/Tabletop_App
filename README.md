@@ -1,3 +1,6 @@
+## Baseado no vídeo do Fireship https://www.youtube.com/watch?v=IF6k0uZuypA
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
