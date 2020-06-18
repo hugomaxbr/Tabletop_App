@@ -29,15 +29,20 @@ ul{
   
 }
 
+
 a {
   color: var(--text-color);
   text-decoration: none;
 }
+main{
+  padding: 0;
+  margin: 0;
+}
 
 .navbar{
   height: var(--nav-size);
+  width: calc((-100%)-(+5rem));
   background-color: var(--bg);
-  padding: 0 1rem;
   border-bottom: var(--border);
 }
 
@@ -48,7 +53,7 @@ a {
   justify-content: flex-end;
 }
 .nav-item {
-  width: calc(car(--nav-size) * 0.8);
+  width: calc(var(--nav-size) * 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,4 +158,94 @@ a {
 .menu-secundary-exit-active{
   transform: translateX(110%);
   transition: all var(--speed) ease;
+}
+
+
+.Mapa{
+  margin-left: 5rem;
+}
+
+
+.navbar_lateral{
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg);
+  transition: width 300ms ease ;
+}
+
+.navbar_lateral:hover{
+  width: 15rem;
+  
+}
+
+.navbar-nav_lateral{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.nav-item_lateral{
+  width: 100%;
+}
+
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: white;
+  fill: white;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 300ms;
+}
+.nav-link svg{
+
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  color: green;
+  fill: green;
+
+}
+
+.nav-link:hover{
+  filter: grayscale(0%) opacity(1);
+  background-color: var(--bg-accent);
+  color: green;
+}
+
+.link_text{
+  display: none;
+  opacity: 0;
+}
+
+.navbar_lateral:hover .link_text{
+  display: block;
+  opacity: 1;
+  animation: linhas calc(var(--speed)*2) forwards;
+
+  
+}
+@keyframes linhas{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.navbar_lateral svg{
+  width: 3rem;
+  height: 3rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  color: white;
+  fill: white;
+}
+
+.navbar_lateral:hover svg{
+  display: block;
+  opacity: 1;
+  fill: green;
+  animation: linhas calc(var(--speed)*2) forwards;
 }
